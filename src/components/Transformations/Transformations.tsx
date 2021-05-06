@@ -1,8 +1,11 @@
 import React from "react";
+import { CenterDiv } from "./TransformationsElements";
 
 const Transformations = ()=> {
   return(
-    <p>Transformations</p>
+    <CenterDiv>
+      <h1>Transformations</h1>
+    </CenterDiv>
   )
 }
 

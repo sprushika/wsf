@@ -1,8 +1,9 @@
 import React from "react";
+import { CenterDiv } from "./PlansElements";
 
 const Plans = ()=> {
   return(
-    <p>Plans</p>
+    <CenterDiv><h1>Plans</h1></CenterDiv>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from "react";
+import { CenterDiv } from "./ContactUsElements";
 
 const ContactUs  = ()=> {
   return(
-    <p>ContactUs</p>
+    <CenterDiv>
+      <h1>ContactUs</h1>
+    </CenterDiv>
   )
 }
 
