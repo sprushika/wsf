@@ -1,9 +1,9 @@
-import NavBar from "./components/NavBar/NavBar";
+import ComponentWrapper from "./components/ComponentWrapper/ComponentWrapper";
 
 import "./App.css";
 
 function App() {
-  return <NavBar />;
+  return <ComponentWrapper />;
 }
 
 export default App;
