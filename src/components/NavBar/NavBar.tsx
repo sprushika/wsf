@@ -1,28 +1,34 @@
+
+import { menuList } from "../../Global/Constant";
+import { Route, BrowserRouter as Router } from "react-router-dom";
+import {Styledli,StyledLink,StyledUl} from '../../Global/Styles'
 import React from "react";
-import { Nav, NavBarContainer } from "./NavBarElements";
-import { menuList } from "../../constants/Constant";
-import { Route, BrowserRouter as Router, Link } from "react-router-dom";
+import reactLogo from '../../Global/reactLogo.png'
 
 function NavBar() {
   return (
+    <React.Fragment>
+      <a href="/">
+      <img src={reactLogo} alt="Logo"  style={{width:"100px",height:"50px"}} />
+      </a>
     <Router>
-      <Nav>
-        <NavBarContainer>
-          <ul>
+     
+       
+          <StyledUl>
             {menuList.map((item) => (
-              <li
-                key={item.key}
-                style={{ display: "inline", paddingRight: "10%" }}
+              <Styledli 
+                key={item.key} 
               >
-                <Link style={{ textDecoration: "none" }} to={item.path}>
+                <StyledLink exact to={item.path}>
                   {item.name}
-                </Link>
-              </li>
+                </StyledLink>
+                
+              </Styledli>
             ))}
-          </ul>
+          </StyledUl>
          
-        </NavBarContainer>        
-      </Nav>
+             
+ 
 
       {menuList.map((li) => (
             <Route
@@ -33,6 +39,7 @@ function NavBar() {
             ></Route>
           ))}
     </Router>
+    </React.Fragment>
   );
 }
 
