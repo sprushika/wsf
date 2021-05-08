@@ -1,13 +1,13 @@
 
-import { menuList } from "../../Global/Constant";
+import { menuList } from "../Global/Constant";
 import { Route, BrowserRouter as Router } from "react-router-dom";
-import {BodyComponent, BodyContainer, NavBar, Styledli,StyledLink,StyledUl} from '../../Global/Styles'
-import reactLogo from '../../Global/reactLogo.png'
+import {BodyComponent, BodyContainer, NavBar, Styledli,StyledLink,StyledUl} from '../Global/Styles'
+import reactLogo from '../Global/reactLogo.png'
 
-function ComponentWrapper() {
+function Main() {
   return (
     <BodyContainer>
-        <Router>
+      <Router>
         <NavBar>
           <a href="/">
             <img src={reactLogo} alt="Logo"  style={{width:"100px",height:"50px"}} />
@@ -37,4 +37,4 @@ function ComponentWrapper() {
   );
 }
 
-export default ComponentWrapper;
+export default Main;

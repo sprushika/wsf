@@ -41,7 +41,8 @@ export const BodyComponent = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  > div {
+  padding: 10px 20px;
+  > div { //All page components
     width: 100%;
     height: 100%;
   }
