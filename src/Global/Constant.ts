@@ -1,8 +1,8 @@
-import Home from "../components/home/home";
-import About from "../components/About/About";
-import ContactUs from "../components/ContactUs/ContactUs";
-import Plans from "../components/Plans/Plans";
-import Transformations from "../components/Transformations/Transformations";
+import Home from "../Pages/Home/Home";
+import About from "../Pages/About/About";
+import ContactUs from "../Pages/ContactUs/ContactUs";
+import Plans from "../Pages/Plans/Plans";
+import Transformations from "../Pages/Transformations/Transformations";
 
 export const menuList = [
   { key: "1", name: "Home", path: "/", component: Home },
@@ -16,3 +16,9 @@ export const menuList = [
     component: Transformations,
   },
 ];
+
+export enum mailConstants{
+  serviceID= "WSFFitness",
+  templateID = "template_7bl0udx",
+  userID  = "user_2c8WghgjHW7zjPSFo7oJF"
+}

@@ -1,9 +1,10 @@
-import ComponentWrapper from "./components/ComponentWrapper/ComponentWrapper";
+import Main from "./Main/Main";
 
 import "./App.css";
+import React from "react";
 
 function App() {
-  return <ComponentWrapper />;
+  return <Main />;
 }
 
 export default App;
