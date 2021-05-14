@@ -16,3 +16,9 @@ export const menuList = [
     component: Transformations,
   },
 ];
+
+export enum mailConstants{
+  serviceID= "WSFFitness",
+  templateID = "template_7bl0udx",
+  userID  = "user_2c8WghgjHW7zjPSFo7oJF"
+}
