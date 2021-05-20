@@ -17,8 +17,49 @@ export const menuList = [
   },
 ];
 
-export enum mailConstants{
-  serviceID= "WSFFitness",
-  templateID = "template_7bl0udx",
-  userID  = "user_2c8WghgjHW7zjPSFo7oJF"
-}
+
+export var plansList=[
+  {id:1, key:"basic",Title:"BASIC",
+  planOverview:"General Dental Treatment Extraction & Crown",
+  planCurrency:"$",planAmount:"65",
+  planBilling:"User/Month* (Billed Annually)",
+  planBenefits:["One Time GP Consulation","Radiograph","Dental Scaling",
+  "Invisisble Retainer","RCT Front Teeth","Filing Nano Composite","RCT Back Teeth"],
+  backgroundColor: ' #00BFFF',
+  isactive:false,
+  showHideBtn:false,
+  },
+
+  { id:2,key:"basic1",Title:"BASIC1",
+  planOverview:"General Dental Treatment Extraction & Crown",
+  planCurrency:"$",planAmount:"65",
+  planBilling:"User/Month* (Billed Annually)",
+  planBenefits:["One Time GP Consulation","Radiograph","Dental Scaling",
+  "Invisisble Retainer","RCT Front Teeth","Filing Nano Composite","RCT Back Teeth"],
+  backgroundColor: ' #66CDAA',
+  isactive:false,
+  showHideBtn:false,
+  },
+  { id:3,key:"basic2",Title:"BASIC2",
+  planOverview:"General Dental Treatment Extraction & Crown",
+  planCurrency:"$",planAmount:"65",
+  planBilling:"User/Month* (Billed Annually)",
+  planBenefits:["One Time GP Consulation","Radiograph","Dental Scaling",
+  "Invisisble Retainer","RCT Front Teeth","Filing Nano Composite","RCT Back Teeth"],
+  backgroundColor: ' #7B68EE',
+  isactive:false,
+  showHideBtn:false,
+  },
+  { id:4,key:"basic3",Title:"BASIC3",
+  planOverview:"General Dental Treatment Extraction & Crown",
+  planCurrency:"$",planAmount:"65",
+  planBilling:"User/Month* (Billed Annually)",
+  planBenefits:["One Time GP Consulation","Radiograph","Dental Scaling",
+  "Invisisble Retainer","RCT Front Teeth","Filing Nano Composite","RCT Back Teeth"],
+  backgroundColor: ' #ff5c6bc7',
+  isactive:false,
+  showHideBtn:false,
+  },
+
+
+]
