@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { PrimaryButton } from '@fluentui/react';
 interface IProps {
     active?: boolean;
+    backgroundColor?:string;
 };
 
 export const Header = styled.h1`
@@ -25,38 +26,11 @@ export const PlanDiv = styled.div`
     border-radius:25px;
 `
 export const PlanOverViewDiv=styled.div`
+    background-color:${(props:IProps) => props.backgroundColor}; 
     padding: 10px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     text-align:center;
-        > p:nth-child(1)
-        {
-            margin-top: 30px;
-            font-size: 18px;
-            font-weight: 600;
-        }
-        > p:nth-child(2)
-        {
-            font-size: 13px !important;
-        }
-`
-export const PlanBilling = styled.p`
-    text-align:center;
-    font-size: 12px;
-        > span:nth-child(1) {
-            font-size: 1em !important;
-            vertical-align: top;
-        } 
-        > span:nth-child(2){
-            font-size: 35px !important; 
-            line-height: 25px;
-        }
-` 
-export const PlanDetailsDiv=styled.span`
-    background-color: #f1f1f1;
-    height: 550px;
-    border-radius: 25px;
-    text-align: center;
         > p:nth-child(1)
         {
             font-size: 16px;
@@ -64,13 +38,41 @@ export const PlanDetailsDiv=styled.span`
         }
         > p:nth-child(2)
         {
+            font-size: 13px;
+        }
+`
+
+export const PlanBilling = styled.p`
+    text-align:center;
+    font-size: 12px;
+        > span:nth-child(1) {
+            font-size: 1em ;
+            vertical-align: top;
+        } 
+        > span:nth-child(2){
+            font-size: 35px ; 
+            line-height: 25px;
+        }
+` 
+
+export const PlanBenefits = styled.p`
+    text-align:center;
+    font-size: 14px;
+    font-weight: 600;
+`
+export const PlanDetailsDiv=styled.span`
+    background-color: #f1f1f1;
+    height: 550px;
+    border-radius: 25px;
+    text-align: center;
+        > p
+        {
             font-size: 14px;
-            
         }
 `
 
 export const CenteredBtn=styled(PrimaryButton)`
-    margin-left: 80px
+    margin-left: 80px;
 `
 
 

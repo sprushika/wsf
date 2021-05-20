@@ -4,15 +4,15 @@ import {
 	PlansContainerDiv,
 	PlanDiv,
 	PlanBilling,
+	PlanBenefits,
 	PlanOverViewDiv,
 	PlanDetailsDiv,
 	CenteredBtn
 } from './PlansElements';
-import { plansList } from '../../Global/Constant';
+import { plansList, planComponentHeader } from '../../Global/Constant';
 const Plans = () => {
 	const [ data, setPlansList ] = useState(plansList);
 	const handleClick = (index: number) => {
-		debugger;
 		let newPlansList = [ ...data ];
 		newPlansList.forEach((plan) => {
 			plan.isactive = false;
@@ -20,32 +20,30 @@ const Plans = () => {
 		newPlansList[index].isactive = true;
 		setPlansList(newPlansList);
 	};
-	const showResgisterBtn = (index: number) => {
+	const showRegisterBtn = (index: number) => {
 		let newPlansList = [ ...data ];
 		newPlansList[index].showHideBtn = true;
 		setPlansList(newPlansList);
 	};
-	const hideResgisterBtn = (index: number) => {
+	const hideRegisterBtn = (index: number) => {
 		let newPlansList = [ ...data ];
 		newPlansList[index].showHideBtn = false;
 		setPlansList(newPlansList);
 	};
-
 	return (
 		<div>
 			<div>
-				<Header>Our Pricing Model</Header>
+				<Header>{planComponentHeader}</Header>
 			</div>
-
 			<PlansContainerDiv>
 				{plansList.map((plan, index) => (
 					<PlanDiv
 						key={plan.Title}
 						active={plan.isactive}
 						onClick={(e) => handleClick(index)}
-						onMouseEnter={(e) => showResgisterBtn(index)}
-						onMouseLeave={(e) => hideResgisterBtn(index)}>
-						<PlanOverViewDiv style={{ backgroundColor: plan.backgroundColor }}>
+						onMouseEnter={(e) => showRegisterBtn(index)}
+						onMouseLeave={(e) => hideRegisterBtn(index)}>
+						<PlanOverViewDiv backgroundColor={plan.backgroundColor}>
 							<p>{plan.Title}</p>
 							<p>{plan.planOverview}</p>
 							<PlanBilling>
@@ -54,9 +52,10 @@ const Plans = () => {
 							</PlanBilling>
 							<PlanBilling>{plan.planBilling}</PlanBilling>
 						</PlanOverViewDiv>
+						<PlanBenefits>Benefits</PlanBenefits>
 						<PlanDetailsDiv>
 							{plan.planBenefits.map((planbenefit) => <p>{planbenefit}</p>)}
-							{plan.showHideBtn ? <CenteredBtn type="submit" text="Register" allowDisabledFocus /> : null}
+							{plan.showHideBtn && <CenteredBtn type="submit" text="Register" allowDisabledFocus />}
 						</PlanDetailsDiv>
 					</PlanDiv>
 				))}
