@@ -3,7 +3,11 @@ import About from '../Pages/About/About';
 import ContactUs from '../Pages/ContactUs/ContactUs';
 import Plans from '../Pages/Plans/Plans';
 import Transformations from '../Pages/Transformations/Transformations';
-
+export enum mailConstants{
+	serviceID= "WSFFitness",
+	templateID = "template_7bl0udx",
+	userID  = "user_2c8WghgjHW7zjPSFo7oJF"
+  }
 export const menuList = [
 	{ key: '1', name: 'Home', path: '/', component: Home },
 	{ key: '2', name: 'About', path: '/About', component: About },
@@ -16,7 +20,7 @@ export const menuList = [
 		component: Transformations
 	}
 ];
-
+export const planComponentHeader="Our Pricing Model";
 export var plansList = [
 	{
 		id: 1,
